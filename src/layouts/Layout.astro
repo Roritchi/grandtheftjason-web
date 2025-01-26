@@ -1,14 +1,43 @@
+---
+
+const BASE_URL = new URL(Astro.url);
+BASE_URL.pathname = ""
+const BASE = BASE_URL.href.slice(0, -1);
+
+---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
-		<title>$jason on Salana</title>
+		<title>$jason on Solana</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+		<link href="/fonts.css" rel="stylesheet">
+
+		<meta name="title" content="$jason on Solana" />
+		<meta name="description" content="Jason is the leading male character in GTA VI, poised to redefine gaming history as one of the greatest games ever created. Hodl $JASON through every storm, and surf the exhilarating waves of Ocean Beach while executing missions across the vibrant landscape of Vice City. 
+
+		Remember, the only way we go to the moon is by HOLDing together; Trust?" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content="$jason on Solana" />
+		<meta property="og:description" content="Jason is the leading male character in GTA VI, poised to redefine gaming history as one of the greatest games ever created. Hodl $JASON through every storm, and surf the exhilarating waves of Ocean Beach while executing missions across the vibrant landscape of Vice City. 
+
+		Remember, the only way we go to the moon is by HOLDing together; Trust?" />
+		<meta property="og:image" content={BASE + "/jason-social.png"} />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="$jason on Solana" />
+		<meta name="twitter:description" content="Jason is the leading male character in GTA VI, poised to redefine gaming history as one of the greatest games ever created. Hodl $JASON through every storm, and surf the exhilarating waves of Ocean Beach while executing missions across the vibrant landscape of Vice City. 
+
+		Remember, the only way we go to the moon is by HOLDing together; Trust?" />
+		<meta name="twitter:image" content={BASE + "/jason-social.png"} />
+		<meta name="twitter:url" content={Astro.url} />
+
 	</head>
 	<body>
 		<slot />
